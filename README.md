@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/License-GPL%20v3-orange?style=for-the-badge" alt="License">
 </p>
 
-<h1 align="center">🎮 SC2FLA-FOSS-Edition</h1>
+<h1 align="center">SC2FLA-FOSS-Edition</h1>
 
 <p align="center">
   <strong>Free and Open-Source tool for converting Supercell <code>.sc</code> files to Adobe Animate <code>.fla</code> files</strong>
@@ -16,35 +16,35 @@
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Status |
 |---------|--------|
-| Basic `.sc` to `.fla` conversion | ✅ |
-| SC2 to SC1 downgrade support | ✅ |
-| SCTX texture decoding | ✅ |
-| KTX/Khronos texture support | ✅ |
-| Batch processing | ✅ |
-| **macOS support (Intel & Apple Silicon)** | ✅ NEW |
-| **Linux support** | ✅ NEW |
-| **Wine integration for cross-platform** | ✅ NEW |
-| Spritesheet creation | 🔜 Soon |
-| Multi-threading | 🔜 Soon |
+| Basic `.sc` to `.fla` conversion | Supported |
+| SC2 to SC1 downgrade support | Supported |
+| SCTX texture decoding | Supported |
+| KTX/Khronos texture support | Supported |
+| Batch processing | Supported |
+| **macOS support (Intel & Apple Silicon)** | **NEW** |
+| **Linux support** | **NEW** |
+| **Wine integration for cross-platform** | **NEW** |
+| Spritesheet creation | Coming Soon |
+| Multi-threading | Coming Soon |
 
 ---
 
-## 🖥️ Platform Support
+## Platform Support
 
 | Platform | Status | Method |
 |----------|--------|--------|
-| Windows 10/11 | ✅ Native | Direct execution |
-| macOS (Intel) | ✅ Full | Wine or native binaries |
-| macOS (Apple Silicon) | ✅ Full | Wine or native binaries |
-| Linux | ✅ Full | Wine or native binaries |
+| Windows 10/11 | Supported | Direct execution |
+| macOS (Intel) | Supported | Wine or native binaries |
+| macOS (Apple Silicon) | Supported | Wine or native binaries |
+| Linux | Supported | Wine or native binaries |
 
 ---
 
-## 📦 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -55,7 +55,7 @@
 ### Installation
 
 <details>
-<summary><b>🪟 Windows</b></summary>
+<summary><b>Windows</b></summary>
 
 ```powershell
 # 1. Clone the repository
@@ -75,7 +75,7 @@ python main.py --help
 </details>
 
 <details>
-<summary><b>🍎 macOS</b></summary>
+<summary><b>macOS</b></summary>
 
 ```bash
 # 1. Install Homebrew (if not installed)
@@ -106,7 +106,7 @@ python main.py --tools
 </details>
 
 <details>
-<summary><b>🐧 Linux</b></summary>
+<summary><b>Linux</b></summary>
 
 ```bash
 # 1. Install Wine
@@ -142,7 +142,7 @@ python main.py --tools
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Basic Usage
 
@@ -181,7 +181,7 @@ Arguments:
   -cx, --compress      Compress .sc files (LZMA | SC | V1)
   -s,  --sort-layers   Enable layer sorting
 
-Platform Commands (NEW):
+Platform Commands:
   --platform           Show platform information
   --tools              Show tool status and paths
   --config             Show configuration status
@@ -208,7 +208,7 @@ chmod +x user-scripts/*.sh
 
 ---
 
-## 🔧 Platform Commands
+## Platform Commands
 
 Check your system compatibility:
 
@@ -217,7 +217,7 @@ Check your system compatibility:
 python main.py --platform
 
 # Example output:
-# ═══ Platform Information ═══
+# === Platform Information ===
 # OS: macos
 # Architecture: arm64
 # Python: 3.12.0
@@ -231,16 +231,16 @@ Check tool status:
 python main.py --tools
 
 # Example output:
-# ═══ Tool Status ═══
-# ✓ sc_downgrade (wine)
-# ✓ sctx_converter (wine)
-# ✓ pvr_tex_tool (wine)
-# ✓ sc_tex (wine)
+# === Tool Status ===
+# [OK] sc_downgrade (wine)
+# [OK] sctx_converter (wine)
+# [OK] pvr_tex_tool (wine)
+# [OK] sc_tex (wine)
 ```
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 SC2FLA-FOSS-Edition/
@@ -267,7 +267,7 @@ SC2FLA-FOSS-Edition/
 
 ---
 
-## 🍷 Wine Integration (macOS/Linux)
+## Wine Integration (macOS/Linux)
 
 This fork automatically detects and uses Wine to run Windows binaries on macOS and Linux.
 
@@ -283,18 +283,18 @@ This fork automatically detects and uses Wine to run Windows binaries on macOS a
 
 ---
 
-## 🛠️ External Dependencies
+## External Dependencies
 
 | Tool | Purpose | Source |
 |------|---------|--------|
-| ScDowngrade | Convert SC2 → SC1 format | [GitHub](https://github.com/Daniil-SV/ScDowngrade/releases) |
+| ScDowngrade | Convert SC2 to SC1 format | [GitHub](https://github.com/Daniil-SV/ScDowngrade/releases) |
 | SctxConverter | Decode SCTX textures | [GitHub](https://github.com/Daniil-SV/SCTX-Converter/releases) |
 | PVRTexToolCLI | Decode KTX textures | [Imagination Tech](https://developer.imaginationtech.com/pvrtextool/) |
 | SCTex | Create spritesheets | [GitHub](https://github.com/sc-workshop/SupercellFlash) |
 
 ---
 
-## ❓ Troubleshooting
+## Troubleshooting
 
 <details>
 <summary><b>Wine not found (macOS)</b></summary>
@@ -342,16 +342,16 @@ python main.py --tools
 
 ---
 
-## 📝 Changelog
+## Changelog
 
-### This Fork (macOS Support)
-- ✅ Full macOS support (Intel & Apple Silicon)
-- ✅ Full Linux support
-- ✅ Wine integration for cross-platform execution
-- ✅ New platform detection system (`--platform`, `--tools`, `--config`)
-- ✅ Shell scripts for macOS/Linux
-- ✅ Python 3.9+ compatibility
-- ✅ Improved error handling
+### This Fork (macOS/Linux Support)
+- Full macOS support (Intel & Apple Silicon)
+- Full Linux support
+- Wine integration for cross-platform execution
+- New platform detection system (`--platform`, `--tools`, `--config`)
+- Shell scripts for macOS/Linux
+- Python 3.9+ compatibility
+- Improved error handling
 
 ### Original Project
 - ~~Improve logging [V1.1]~~
@@ -359,12 +359,12 @@ python main.py --tools
 - ~~Implement SCTX Converter [V3.0]~~
 - ~~Implement RAW dump feature [V4.0]~~
 - ~~Fix Khronos textures with PVRTexTool [V5.0]~~
-- 🔜 Spritesheet creation with SCTex.exe
-- 🔜 Multi-threading support
+- Spritesheet creation with SCTex.exe (coming soon)
+- Multi-threading support (coming soon)
 
 ---
 
-## 🙏 Credits
+## Credits
 
 | Contributor | Contribution |
 |-------------|--------------|
@@ -375,7 +375,7 @@ python main.py --tools
 
 ---
 
-## 📄 License
+## License
 
 ```
 Copyright (C) 2025 GenericName1911 & Contributors
@@ -395,10 +395,6 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 ```
 
 ---
-
-<p align="center">
-  <strong>⭐ Star this repo if it helped you! ⭐</strong>
-</p>
 
 <p align="center">
   <a href="https://github.com/Dstnexe/SC2FLA-FOSS-Edition/issues">Report Bug</a>
